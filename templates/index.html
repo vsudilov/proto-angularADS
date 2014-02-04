@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="/static/dist/css/bootstrap.css"/>
+  <style>
+    html,body,.col-md-12,.row {
+      height:100%;
+    }
+    .row > div {
+      height:100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-header" style="margin-left:50px">
+    <span>AngularJS ADS Search proof-of-concept</span>
+    <div ng-controller="QueryControl as q">
+      <input type="text" ng-model="UserQuery">
+      <button type="button" class='btn' ng-click="q.submit()">Submit</button>
+    </div>
+  
+  </div>
+
+
+  <div ng-view></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  -->
+  <script src="/static/js/jquery-2.0.2.min.js"></script>
+  <script src="/static/lib/angular/angular.js"></script>
+  <script src="/static/lib/angular/angular-route.js"></script>
+  <script src="/static/js/app.js"></script>
+  <script src="/static/js/services.js"></script>
+  <script src="/static/js/controllers.js"></script>
+  <script src="/static/js/filters.js"></script>
+  <script src="/static/js/directives.js"></script>
+  <script src="/static/dist/js/bootstrap.js"></script>
+</body>
+</html>
